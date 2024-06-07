@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<head>
+ <title>Music Hub</title>
+ <!-- Linking Google Fonts -->
+ <link rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+ <!-- CSS Styles -->
+ <style>
+ /* Define CSS variables */
+ :root {
+ --primary-color: black;
+ --secondary-color: lightgreen;
+ --text-color: white;
+ --font-family: 'Roboto', sans-serif;
+ }
+ /* Fluid typography */
+ html {
+ font-size: 16px;
+ }
+ @media screen and (min-width: 600px) {
+ html {
+ font-size: calc(16px + 6 * ((100vw - 600px) / 400));
+ }
+ }
+ /* Global styles */
+ body {
+ font-family: var(--font-family);
+ color: var(--text-color);
+ margin: 0;
+ padding: 0;
+ background-color: var(--primary-color);
+ position: relative;
+ }
+ header {
+ background-color: var(--secondary-color);
+ color: var(--text-color);
+ padding: 20px;
+ position: fixed;
+ width: 100%;
+ z-index: 1000;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+ nav ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ }
+ nav ul li {
+ display: inline;
+ margin-right: 20px;
+ }
+ nav ul li a {
+ color: var(--text-color);
+ text-decoration: none;
+ font-weight: bold;
+ transition: color 0.3s; /* Smooth transition effect */
+ }
+ nav ul li a:hover {
+ color: blue; /* Change color on hover */
+ }
+ main {
+ padding-top: 80px; /* Adjust for header height */
+ }
+ section {
+ padding: 20px;
+ }
+ h2 {
+ color: var(--secondary-color);
+ }
+ article {
+ margin-bottom: 20px;
+ background-color: rgba(255, 255, 255, 0.1);
+ border-radius: 5px;
+ padding: 20px;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+ /* Responsive cards */
+ article {
+ display: flex;
+ flex-wrap: wrap;
+ }
+ article>* {
+ flex: 1 1 45%;
+ /* Adjust this value for desired card width */
+ margin: 10px;
+ padding: 20px;
+ border-radius: 5px;
+ }
+ @media screen and (min-width: 768px) {
+ article>* {
+ flex: 1 1 calc(33% - 20px);
+ }
+ }
+ footer {
+ background-color: var(--secondary-color);
+ color: var(--text-color);
+ text-align: center;
+ padding: 10px;
+ position: fixed;
+ bottom: 0;
+ width: 100%;
+ }
+ /* Responsive multimedia */
+ .responsive-media {
+ max-width: 100%;
+ height: auto;
+ }
+ </style>
+</head>
+<body>
+ <header>
+ <h1>Music Hub</h1>
+ <nav>
+ <ul>
+ <li><a href="#genres">Genres</a></li>
+ <li><a href="#artists">Featured Artists</a></li>
+ <li><a href="#instruments">Instruments</a></li>
+ </ul>
+ </nav>
+ </header>
+ <main>
+ 
+ <section id="genres">
+ <h2>Genres</h2>
+ <article>
+ <h3>Rock</h3>
+ <p>Rock music is a broad genre of popular music1. It originated 
+from pop in the late 1940s and early 1950s.</p>
+ <!-- Embedding images, audio clips, and videos -->
+ <img src="https://th.bing.com/th/id/OIP.UjrLxCdBfra8q_tRFiIT7wHaEo?w=310&h=193&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Rock Music"
+class="responsive-media">
+ <audio controls class="responsive-media">
+ <source src="<iframe width="679" height="382"
+src="https://www.youtube.com/embed/TXGbhniTBrU" title="Queen - We Will Rock You 
+[Lyrics]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" 
+type="audio/mpeg">
+ Your browser does not support the audio element.
+ </audio>
+ <video controls class="responsive-media">
+ <source src="rock_video.mp4" type="video/mp4">
+ Your browser does not support the video element.
+ </video>
+ </article>
+ <article>
+ <h3>Jazz</h3>
+ <p>Jazz is a music genre that originated in the African-American 
+communities of New Orleans, Louisiana, in the late 19th and early 20th centuries, 
+with its roots in blues, ragtime, European harmony and African rhythmic 
+rituals.</p>
+ <!-- Embedding images, audio clips, and videos -->
+ <img
+src="https://th.bing.com/th/id/OIP.XaH2QG4gX3A4LfQ5Lua7XQHaFj?w=286&h=214&c=7&r=0
+&o=5&dpr=1.5&pid=1.7" alt="Jazz Music" class="responsive-media" 
+height="100"width="100">
+ <audio controls class="responsive-media">
+ <source src="<iframe width="679" height="382"
+src="https://www.youtube.com/embed/TXGbhniTBrU" title="Queen - We Will Rock You 
+[Lyrics]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" 
+type="audio/mpeg">
+ Your browser does not support the audio element.
+ </audio>
+ <video controls class="responsive-media">
+ <source src="jazz_video.mp4" type="video/mp4">
+ Your browser does not support the video element.
+ </video>
+ </article>
+ <!-- Add more genre articles as needed -->
+ </section>
+ <section id="featured artists">
+ <h2>Featured Artists</h2>
+ <article>
+ <h3>Arijit singh</h3>
+ <p>Arijit Singh (born 25 April 1987) is an Indian playback singer 
+and music composer.The recipient of several accolades including a National Film 
+Award and seven Filmfare Awards.</p>
+ <!-- Embedding images, audio clips, and videos -->
+ <img src="https://th.bing.com/th/id/OIP.GKVr9f7wmaOCyiEV8-
+QrCgHaHa?w=170&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Arijit singh"
+class="responsive-media" height="90"width="90">
+ </article>
+ <article>
+ <h3>Atif Aslam</h3>
+ <p>Atif Aslam(born 12 March 1983) is a Pakistani playback singer, 
+songwriter, composer, and actor. He has recorded many songs in both Pakistan and 
+India, and is known for his vocal belting technique.</p>
+ <!-- Embedding images, audio clips, and videos -->
+ <img
+src="https://th.bing.com/th/id/OIP.ZIPy3qVo8i2GW_lEnph5UwHaHa?w=207&h=207&c=7&r=0
+&o=5&dpr=1.5&pid=1.7" alt="Atif Aslam" class="responsive-media" 
+height="90"width="90">
+ 
+ </article>
+ <!-- Add more genre articles as needed -->
+ </section>
+</section>
+ <section id="Instruments">
+ <h2>Instruments</h2>
+ <article>
+ <h3>Guitar</h3></h3>
+ <p>The guitar is a stringed musical instrument that is usually 
+fretted (with some exceptions) and typically has six or twelve strings.</p>
+ <!-- Embedding images, audio clips, and videos -->
+ <img
+src="https://th.bing.com/th/id/OIP.Emx42H3ZuEqD6NoY87UaogHaLx?w=115&h=180&c=7&r=0
+&o=5&dpr=1.5&pid=1.7" alt="Guitar" class="responsive-media">
+ </article>
+ <article>
+ <h3>Harmonium</h3>
+ <p>A harmonium, also called a "reed organ" or "pump organ", is a 
+keyboard instrument that is a lot like an organ.</p>
+ <!-- Embedding images, audio clips, and videos -->
+ <img
+src="https://th.bing.com/th/id/OIP.ovTGPYHzssgrjRmbFrqNGwHaF6?w=246&h=197&c=7&r=0
+&o=5&dpr=1.5&pid=1.7" alt="Harmonium" class="responsive-media">
+ 
+ </article>
+ <!-- Add more genre articles as needed -->
+ </section>
+ <!-- Other sections with multimedia elements -->
+ </main>
+ <footer>
+ <p>&copy; 2024 Music Hub by Muskan</p>
+ </footer>
+</body>
+</html>
